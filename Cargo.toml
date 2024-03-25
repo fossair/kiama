@@ -8,8 +8,8 @@ documentation = "https://github.com/fossair/kiama/blob/main/README.md"
 homepage = "https://github.com/fossair/kiama"
 repository = "https://github.com/fossair/kiama"
 readme = "README.md"
-licence = "MIT"
-licence-file = "LICENSE"
+license = "MIT"
+license-file = "LICENSE"
 keywords = ["macro"]
 categories = []
 
