@@ -1,6 +1,6 @@
 [package]
 name = "kiama"
-version = "0.0.0"
+version = "0.0.1"
 edition = "2021"
 rust-version = "1.77.0"
 description = "Dataframe helper"
@@ -9,10 +9,13 @@ homepage = "https://github.com/kiama-rs/kiama"
 repository = "https://github.com/fossair/kiama"
 readme = "README.md"
 license = "MIT"
-license-file = "LICENSE"
 keywords = ["macro"]
 categories = []
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+async-trait = "^0.1.79"
+
+[dev-dependencies]
+tokio = { version = "^1.36.0", features = ["macros", "rt", "rt-multi-thread"] }
