@@ -1,4 +1,5 @@
 use kiama::client::Client;
+use polars::prelude::*;
 use std::env;
 
 #[tokio::main]
@@ -9,5 +10,15 @@ async fn main() {
 
     let client = Client::from(dir_path.to_string());
     let library = client.create_library("toto".to_string()).await;
-    library.read().await;
+
+    let q = LazyCsvReader::new("data/date_series-AAPL-1day.csv")
+        .has_header(true)
+        .with_separator(b';')
+        .finish()
+        .expect("data");
+    let df = q.collect().expect("data");
+    println!("{}", df);
+
+    let df2 = library.read().await;
+    println!("{}", df2);
 }

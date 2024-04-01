@@ -5,4 +5,5 @@ edition = "2021"
 
 [dependencies]
 kiama = { path="../.." }
+polars = { version = "^0.38.3", features = ["csv", "lazy"] }
 tokio = { version = "^1.36.0", features = ["macros", "rt", "rt-multi-thread"] }

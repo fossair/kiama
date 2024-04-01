@@ -1,10 +1,9 @@
-use crate::library::Library;
 use crate::backend::local::LocalBackend;
+use crate::library::Library;
 
 pub struct Client {
     pub backend: LocalBackend,
 }
-
 
 impl Client {
     pub fn from(url: String) -> Client {
@@ -17,29 +16,25 @@ impl Client {
     }
 }
 
-
-
-
-
 // pub struct Client {
 //     backend: LocalBackend,
 // }
-// 
+//
 // impl Client {
 //     pub fn from(url: String) -> Self {
 //         let backend = LocalBackend::from(url);
 //         Client { backend }
 //     }
-// 
+//
 //     pub fn create_library(&self, library_name: String) {
 //         self.backend.create_library(library_name);
 //     }
 // }
-// 
+//
 // #[cfg(test)]
 // mod tests {
 //     use crate::client::Client;
-// 
+//
 //     #[test]
 //     fn create_client() {
 //         let url = "my_url";
