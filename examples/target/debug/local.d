@@ -1,1 +1,0 @@
-/home/rem/Workspace/kiama-rs/kiama/examples/target/debug/local: /home/rem/Workspace/kiama-rs/kiama/examples/local/src/main.rs /home/rem/Workspace/kiama-rs/kiama/src/backend/local.rs /home/rem/Workspace/kiama-rs/kiama/src/backend/mod.rs /home/rem/Workspace/kiama-rs/kiama/src/client.rs /home/rem/Workspace/kiama-rs/kiama/src/lib.rs /home/rem/Workspace/kiama-rs/kiama/src/library.rs
