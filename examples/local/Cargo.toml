@@ -1,0 +1,8 @@
+[package]
+name = "local"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+kiama = { path="../.." }
+tokio = { version = "^1.36.0", features = ["macros", "rt", "rt-multi-thread"] }

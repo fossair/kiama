@@ -1,12 +1,12 @@
-use crate::backend::Backend;
+use crate::backend::local::LocalBackend;
 
-pub struct Library<'a> {
-    backend: &'a Backend,
+pub struct Library {
+    backend: LocalBackend,
     name: String,
 }
 
-impl Library<'_> {
-    pub async fn create(backend: &Backend, name: String) -> Library {
+impl Library {
+    pub async fn create(backend: LocalBackend, name: String) -> Library {
         Library { backend, name }
     }
 

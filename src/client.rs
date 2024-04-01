@@ -1,19 +1,19 @@
-use crate::backend::Backend;
 use crate::library::Library;
+use crate::backend::local::LocalBackend;
 
 pub struct Client {
-    pub backend: Backend,
+    pub backend: LocalBackend,
 }
 
 
 impl Client {
     pub fn from(url: String) -> Client {
-        let backend = Backend::from(url);
+        let backend = LocalBackend::from(url);
         Client { backend }
     }
 
-    pub async fn create_library(&self, name: String) -> Library {
-        Library::create(&self.backend, name).await
+    pub async fn create_library(self, name: String) -> Library {
+        Library::create(self.backend, name).await
     }
 }
 
